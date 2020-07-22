@@ -4,8 +4,7 @@ char2=char1.lower()
 char3="!@#$%^&*()"
 char4="0123456789"
 def message():
-    print("Welcome to your random password generator!")
-    print("Please select the length of each of your characters")
+    print("Please enter the length of each of your characters")
     print(userGen())
 def userGen():
     upper=int(input("Amount of upper case letters:"))
@@ -15,8 +14,8 @@ def userGen():
     return passGen(upper,lower,spec,num)
 def passGen(upper,lower,spec,num):
     new_password=""
-    if (upper+lower+spec+num)<6:
-        print("Please enter minimum 6 letters.")
+    if (upper+lower+spec+num)<min_length:
+        print("Please enter minimum", str(min_length), "values.")
     else:
         for i in range(upper):
             new_password+=choice(char1)
@@ -30,4 +29,6 @@ def passGen(upper,lower,spec,num):
     shuff=shuffle(pass_word)
     new_pass="".join(pass_word)
     return new_pass
+print("Welcome to your random password generator!")
+min_length = int(input("Enter the minimum length required for the password?"))
 message()
