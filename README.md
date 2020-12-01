@@ -1,8 +1,4 @@
 
 BEGINNER PROJECT ON PYTHON:
  
- 1.Guess The Number
- 
- 2.Rock Paper Scissors
- 
- 3.Password Generator
+ Password Generator:I have to guess a number between a range.According to my guess computer told me if my guess is too high or low.If number matched then it will print number matched.
